@@ -12,36 +12,22 @@
   "author": "Juan Ignacio Casal @nacheina",
   "license": "MIT",
   "devDependencies": {
-    "express": "~4.10.4",
-    "gulp": "~3.8.10",
-    "require-dir": "~0.1.0",
+    "amd-optimize": "^0.3.1",
     "browserify": "~6.3.3",
-    "vinyl-source-stream": "~1.0.0",
-    "gulp-handlebars": "~3.0.1",
-    "gulp-wrap": "~0.5.0",
-    "gulp-declare": "~0.3.0",
-    "gulp-concat": "~2.4.2",
     "browserify-shim": "~3.8.0",
+    "express": "~4.10.4",
+    "express-handlebars": "~1.1.0",
+    "gulp": "~3.8.10",
+    "gulp-concat": "~2.4.2",
+    "gulp-connect": "~2.2.0",
+    "gulp-declare": "~0.3.0",
+    "gulp-handlebars": "~3.0.1",
     "gulp-jshint": "~1.9.0",
+    "gulp-processhtml": "~1.0.2",
     "gulp-uglify": "~1.0.1",
     "gulp-util": "~3.0.1",
-    "gulp-processhtml": "~1.0.2",
-    "express-handlebars": "~1.1.0",
-    "gulp-connect": "~2.2.0"
-  },
-  "browser": {
-    "backbone": "./src/components/backbone/backbone.js",
-    "jquery": "./src/components/jquery/dist/jquery.min.js",
-    "underscore": "./src/components/underscore/underscore-min.js"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": {
-    "backbone": "backbone",
-    "jquery": "$",
-    "underscore": "_"
+    "gulp-wrap": "~0.5.0",
+    "require-dir": "~0.1.0",
+    "vinyl-source-stream": "~1.0.0"
   }
 }

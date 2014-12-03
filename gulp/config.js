@@ -15,9 +15,30 @@ module.exports = {
     src: build,
     dest: dist
   },
-  uglify: {
-    src: build + '/js/**/*.js',
-    dest: dist + '/js/'
+  javascript: {
+    src: src + '/js/**/*.js',
+    dest: dist + '/js/',
+    destFile: 'app.min.js',
+    entryPoint: 'RSSReader.Starter',
+    amdConfig: {
+      paths: {
+          "jQuery": "jquery",
+          "Backbone": "../../src/js/components/backbone"
+      },
+      shim: {
+          "jQuery": {
+              "exports": "$"
+          },
+          "Backbone": {
+              "deps": [
+                  "underscore",
+                  "jQuery"
+              ],
+              "exports": "Backbone"
+          }
+      },
+      findNestedDependencies: true
+    }
   },
   lint: {
     files: [src + '/javascripts/**/*.js']
